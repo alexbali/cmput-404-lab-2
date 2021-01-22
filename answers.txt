@@ -5,13 +5,13 @@ Question 1: How do you specify a TCP socket in Python?
 
 In python the following line:
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-creates a TCP socket. 
+creates a TCP socket. The socket.SOCK_STREAM argument specifies TCP . 
 
 ------------------------------------------------------------------------------------------------------
 Question 2: What is the difference between a client socket and a server socket in Python?
 
 A client socket is used to establish a connection to a server and make a request.
-The server socket waits for a request and depending on the request it recieves the server performs an action and returns the result back to the client.
+The server socket waits for a request and depending on the request it recieves the server performs an action and returns the result back to the client. Specify which ports to listen on.
 
 ------------------------------------------------------------------------------------------------------
 Question 3: How do we instruct the OS to let us reuse the same bind port?
@@ -22,6 +22,7 @@ s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 Question 4: What information do we get about incoming connections?
 
 server side incoming connections recieve a tcp socket and a payload (which could be the particular request the client is making)
+hostname and port
 
 ------------------------------------------------------------------------------------------------------
 Question 5: What is returned by recv() from the server after it is done sending the HTTP request?
@@ -30,3 +31,5 @@ recv() returns a response form the request that was sent to the server. the resp
 
 ------------------------------------------------------------------------------------------------------
 Question 6: Provide a link to your code on GitHub.
+
+https://github.com/alexbali/cmput-404-lab-2
